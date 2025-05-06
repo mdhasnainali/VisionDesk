@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/mdhasnainali/Researcher/ML_DL/Github_Work/test/VisionDesk/frontend/src/app/dashboard/loading.tsx"],"sourcesContent":["const Loading = () => {\r\n    return (\r\n        <div className=\"flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800\">\r\n        <div className=\"text-center flex flex-col items-center\">\r\n          {/* Spinner */}\r\n          <div className=\"animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-purple-500 dark:border-purple-400 mb-4\"></div>\r\n  \r\n          {/* Loading Text */}\r\n          <h1 className=\"text-2xl font-semibold text-gray-800 dark:text-gray-200\">Loading Dashboard...</h1>\r\n          <p className=\"text-gray-600 dark:text-gray-400 mt-2\">Please wait while we prepare your dashboard.</p>\r\n        </div>\r\n      </div>\r\n    );\r\n}\r\n\r\nexport default Loading; "],"names":[],"mappings":";;;;;AAAA,MAAM,UAAU;IACZ,qBACI,8OAAC;QAAI,WAAU;kBACf,cAAA,8OAAC;YAAI,WAAU;;8BAEb,8OAAC;oBAAI,WAAU;;;;;;8BAGf,8OAAC;oBAAG,WAAU;8BAA0D;;;;;;8BACxE,8OAAC;oBAAE,WAAU;8BAAwC;;;;;;;;;;;;;;;;;AAI/D;uCAEe","debugId":null}},
+    {"offset": {"line": 54, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
