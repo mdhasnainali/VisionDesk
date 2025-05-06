@@ -1,0 +1,9 @@
+{
+  "/onboarding/page": "app/onboarding/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/(home)/page": "app/(home)/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/onboarding/annotate-image/page": "app/onboarding/annotate-image/page.js",
+  "/dashboard/all-desk/page": "app/dashboard/all-desk/page.js",
+  "/dashboard/report/heatmap/page": "app/dashboard/report/heatmap/page.js"
+}
