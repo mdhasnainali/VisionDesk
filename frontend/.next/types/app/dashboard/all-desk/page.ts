@@ -1,4 +1,4 @@
-// File: /Users/mdhasnainali/Researcher/ML_DL/Github_Work/test/VisionDesk/frontend/src/app/dashboard/all-desk/page.tsx
+// File: /Users/mdhasnainali/Researcher/ML_DL/Github_Work/VisionDesk/frontend/src/app/dashboard/all-desk/page.tsx
 import * as entry from '../../../../../src/app/dashboard/all-desk/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

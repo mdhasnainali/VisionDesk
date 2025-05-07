@@ -96,7 +96,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "/Users/mdhasnainali/Researcher/ML_DL/Github_Work/test/VisionDesk/frontend",
+    "outputFileTracingRoot": "/Users/mdhasnainali/Researcher/ML_DL/Github_Work/VisionDesk/frontend",
     "experimental": {
       "nodeMiddleware": false,
       "cacheLife": {
@@ -174,7 +174,7 @@
       "forceSwcTransforms": false,
       "largePageDataBytes": 128000,
       "turbo": {
-        "root": "/Users/mdhasnainali/Researcher/ML_DL/Github_Work/test/VisionDesk/frontend"
+        "root": "/Users/mdhasnainali/Researcher/ML_DL/Github_Work/VisionDesk/frontend"
       },
       "typedRoutes": false,
       "typedEnv": false,
@@ -280,7 +280,7 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts"
   },
-  "appDir": "/Users/mdhasnainali/Researcher/ML_DL/Github_Work/test/VisionDesk/frontend",
+  "appDir": "/Users/mdhasnainali/Researcher/ML_DL/Github_Work/VisionDesk/frontend",
   "relativeAppDir": "",
   "files": [
     ".next/routes-manifest.json",

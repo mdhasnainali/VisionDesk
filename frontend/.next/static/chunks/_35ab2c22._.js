@@ -11,27 +11,16 @@ __turbopack_context__.s({
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/axios/lib/axios.js [app-client] (ecmascript)");
 ;
-// Check if the backend URL is configured
-const backendUrl = ("TURBOPACK compile-time value", "http://localhost:8000/");
-if ("TURBOPACK compile-time falsy", 0) {
-    "TURBOPACK unreachable";
-}
-// Create an axios instance with better defaults
+// Create an instance of axios
 const api = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].create({
-    baseURL: backendUrl || 'http://localhost:8000',
-    timeout: 15000,
+    baseURL: ("TURBOPACK compile-time value", "http://localhost:8000/"),
     headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
+        "Content-Type": "application/json"
     },
     withCredentials: true
 });
-// Add request interceptor for handling auth and debugging
+// Add a request interceptor to include Authorization header
 api.interceptors.request.use((config)=>{
-    // Log the request in development
-    if ("TURBOPACK compile-time truthy", 1) {
-        console.log(`API Request: ${config.method?.toUpperCase()} ${config.baseURL}${config.url}`);
-    }
     if ("TURBOPACK compile-time truthy", 1) {
         const accessToken = localStorage.getItem("access_token");
         if (accessToken) {
@@ -40,30 +29,6 @@ api.interceptors.request.use((config)=>{
     }
     return config;
 }, (error)=>{
-    return Promise.reject(error);
-});
-// Add response interceptor for common error handling
-api.interceptors.response.use((response)=>{
-    return response;
-}, (error)=>{
-    // Handle network errors with clear messages
-    if (error.message === 'Network Error') {
-        console.error('Network Error: Cannot connect to the backend server. ' + 'Please check if your backend is running and the NEXT_PUBLIC_BACKEND_URL is correct.');
-    }
-    // Handle timeout
-    if (error.code === 'ECONNABORTED') {
-        console.error('Request timeout: The server took too long to respond.');
-    }
-    // Log full error details in development
-    if ("TURBOPACK compile-time truthy", 1) {
-        console.error('API Error Details:', {
-            message: error.message,
-            code: error.code,
-            status: error.response?.status,
-            data: error.response?.data,
-            url: error.config?.url
-        });
-    }
     return Promise.reject(error);
 });
 const __TURBOPACK__default__export__ = api;

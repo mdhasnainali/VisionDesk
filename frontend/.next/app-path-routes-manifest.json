@@ -1,14 +1,14 @@
 {
-  "/_not-found/page": "/_not-found",
   "/favicon.ico/route": "/favicon.ico",
+  "/_not-found/page": "/_not-found",
   "/auth/register/page": "/auth/register",
   "/auth/login/page": "/auth/login",
-  "/dashboard/page": "/dashboard",
-  "/dashboard/report/heatmap/page": "/dashboard/report/heatmap",
   "/dashboard/all-desk/page": "/dashboard/all-desk",
-  "/dashboard/report/page": "/dashboard/report",
+  "/dashboard/report/heatmap/page": "/dashboard/report/heatmap",
   "/onboarding/annotate-image/page": "/onboarding/annotate-image",
+  "/dashboard/report/page": "/dashboard/report",
   "/onboarding/file-upload/page": "/onboarding/file-upload",
+  "/onboarding/page": "/onboarding",
   "/(home)/page": "/",
-  "/onboarding/page": "/onboarding"
+  "/dashboard/page": "/dashboard"
 }
