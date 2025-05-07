@@ -132,6 +132,22 @@ root/
 * **Swagger (Django):** `http://localhost:8000/swagger`
 * **AI API (FastAPI):** `http://localhost:80/docs`
 
+## 🧪 Sample Data for Testing
+
+To quickly test the system, you can use these sample videos:
+
+### Sample Video URLs
+- Office environment: [Sample Office Video](https://drive.google.com/file/d/1X1BLCyq1bUCGrnrfN1w8OlNbXVRsfKXf/view?usp=sharing)
+
+### Working Demo
+
+#### Live System Demonstration
+![Live Demo 1](/media/demo1.gif)
+![Live Demo 2](/media/demo2.gif)
+
+#### Video Feed Demonstration
+![Video Feed Demo](/media/footage.gif)
+
 ## 🤝 Contributing
 
 1. Fork the repository
