@@ -1,156 +1,151 @@
-# 📜 Contributing to VisionDesk
+<div align="center">
 
-Thank you for your interest in contributing to **VisionDesk**! We follow a collaborative Git-based workflow where each contributor works independently on a fork and submits pull requests (PRs) to the main repository.
+# 🚀 VisionDesk
 
----
+<h3>AI-Powered Workforce Surveillance and Efficiency Platform</h3>
 
-## 🏁 Getting Started
+[![Python](https://img.shields.io/badge/Python-3.10-3776AB?style=for-the-badge&logo=python&logoColor=white)]
+[![Next.js](https://img.shields.io/badge/Next.js-13-000000?style=for-the-badge&logo=next-dot-js&logoColor=white)]
+[![Django](https://img.shields.io/badge/Django-4.2-092E20?style=for-the-badge&logo=django&logoColor=white)]
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.95-009688?style=for-the-badge&logo=fastapi&logoColor=white)]
 
-### 1. Fork the Repository
-
-Fork the repository to your GitHub account by clicking the **"Fork"** button on the top-right of [VisionDesk](https://github.com/mdhasnainali/VisionDesk).
-
-### 2. Clone Your Fork Locally
-
-Use SSH to clone your forked repository:
-
-```bash
-git clone git@github.com:<your-username>/VisionDesk.git
-cd VisionDesk
-```
-
-### 3. Set the Original Repository as `upstream`
-
-```bash
-git remote add upstream git@github.com:mdhasnainali/VisionDesk.git
-git fetch upstream
-```
+</div>
 
 ---
 
-## 🌱 Working on Your Contribution
+## 📖 Overview
 
-### 1. Create a New Branch
+VisionDesk is a comprehensive AI-driven surveillance solution tailored for manufacturing and industrial settings. Leveraging advanced pose estimation and activity recognition, our platform distinguishes between productive behaviors (e.g., typing, assembling) and non-productive actions (e.g., idling, phone usage). This empowers businesses to monitor workforce efficiency objectively and extract actionable insights for process optimization, automation, quality control, and supply chain efficiency.
 
-Before making any changes, create a feature branch based on the latest version of the main branch:
+## 🎯 Segment & Vision
 
-```bash
-git checkout main
-git pull upstream main
-git checkout -b your-feature-name
-```
+- **Segment:** Manufacturing — Process Optimization, Automation, Quality Control, Supply Chain Efficiency
+- **Team:** Machine_Mindset
+- **Vision:** To deliver unbiased, real-time analytics of worker activities, enhancing productivity and safety through intelligent monitoring.
 
-> 📌 Use a meaningful name for your branch, like `bugfix-auth-error` or `feature-enhance-ui`.
+## 👥 Team Members
 
-### 2. Make Your Changes
+1. Md. Hasnain Ali
+2. Md. Ahanaf Arif Khan
+3. M. F. R. Siam
+4. Md. Saleh Sadiq Tanim
+5. Md. Tofaal Ahmed
 
-- Make your changes logically and cleanly.
-- Test thoroughly before committing.
-- Follow good coding practices and project structure.
+## 🚀 Quick Start
 
-### 3. Commit Your Changes
+### Prerequisites
 
-```bash
-git add .
-git commit -m "Add: Description of your changes"
-```
+- Node.js >= 18.x
+- Python >= 3.10
+- Docker (optional, for containerized deployment)
+- Redis server (for AI task queue)
+- FFmpeg (for video processing)
 
----
+### Frontend Setup
 
-## 🔁 Sync with Original Repository (Optional but Recommended)
-
-If others are working in parallel, sync your fork regularly:
-
-```bash
-git fetch upstream
-git checkout main
-git merge upstream/main
-```
-
-Rebase your working branch if needed:
-
-```bash
-git checkout your-feature-name
-git rebase main
-```
-
----
-
-## 📩 Submit a Pull Request
-
-1. Push your branch to your forked repo:
+1. **Configure Environment**
    ```bash
-   git push origin your-feature-name
+   cd frontend
+   cp .env.example .env
+   # Edit .env and set NEXT_PUBLIC_BACKEND_URL
+    ```
+
+2. **Install Dependencies**
+
+   ```bash
+   npm install
+   # or npm install --legacy-peer-deps
+   ```
+3. **Development Mode**
+
+   ```bash
+   npm run dev
+   ```
+4. **Production Build**
+
+   ```bash
+   npm run build
+   npm start
+   # To specify port: npm run start -- -p 4000
    ```
 
-2. Go to the original repo: [https://github.com/mdhasnainali/VisionDesk](https://github.com/mdhasnainali/VisionDesk)
+### Backend Setup (Django)
 
-3. Click **"Compare & pull request"**.
+1. **Create and Activate Virtual Environment**
 
-4. Select the following:
-   - **Base repository**: `mdhasnainali/VisionDesk`
-   - **Base branch**: `main`
-   - **Head repository**: your GitHub fork
-   - **Compare branch**: `your-feature-name`
+   ```bash
+   python -m venv venv
+   source venv/bin/activate   # macOS/Linux
+   venv\\Scripts\\activate  # Windows
+   ```
+2. **Install Requirements**
 
-5. Add a clear **title** and a detailed **description** of what you changed.
+   ```bash
+   cd vision_desk_backend
+   pip install -r requirements.txt
+   ```
+3. **Run Server**
 
-6. Click **"Create pull request"**.
+   ```bash
+   python manage.py runserver           # default 8000
+   python manage.py runserver 0.0.0.0:9000  # custom port
+   ```
+
+### AI Backend Setup (FastAPI)
+
+1. **Activate Virtual Environment** (if not active)
+2. **Install Dependencies**
+
+   ```bash
+   cd ai-end
+   pip install -r requirements.txt
+   ```
+3. **Install System Dependencies**
+
+   * **FFmpeg:**
+
+     * macOS: `brew install ffmpeg`
+     * Linux: `sudo apt update && sudo apt install ffmpeg`
+   * **Redis:**
+
+     * macOS: `brew install redis && brew services start redis`
+     * Linux: `sudo apt update && sudo apt install redis-server && sudo systemctl enable --now redis`
+4. **Start AI Server**
+
+   ```bash
+   uvicorn main:app --host 0.0.0.0 --port 80
+   ```
+
+## 🗂️ Project Structure
+
+```
+root/
+├── frontend/           # Next.js frontend
+├── backend/            # Django REST backend
+├── ai-end/             # FastAPI-based AI services
+├── docs/               # Documentation and design specs
+└── scripts/            # Automation and deployment scripts
+```
+
+## 📄 API Reference
+
+* **Swagger (Django):** `http://localhost:8000/swagger`
+* **AI API (FastAPI):** `http://localhost:80/docs`
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/YourFeature`)
+3. Commit your changes (`git commit -m 'Add new feature'`)
+4. Push to the branch (`git push origin feature/YourFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
-## ✅ Contribution Checklist
-
-- [ ] My code is well-structured and commented.
-- [ ] I’ve tested my changes.
-- [ ] My commits are descriptive and atomic.
-- [ ] I’ve pulled the latest changes from `main` before submitting.
-- [ ] I’ve opened the PR against the correct base branch (`main`).
-
----
-
-## 🙏 Code of Conduct
-
-We expect all contributors to act respectfully and constructively. Let's build something great together.
-
----
-
-If you have any questions, open an issue or reach out to the maintainer.
-
-Happy contributing! 🚀
-# Guide
-
-### Create a virtual environment
-
-```bash
-python -m venv env
-```
-
-### Install dependencies
-
-```bash
-pip install -r requirements.txt
-cd vision_desk_backend
-```
-
-#### Run the server locally
-```
-python manage.py runserver
-```
-
-### For exposing IP
-```bash
-python manage.py runserver 0.0.0.0:<port>
-```
-
-### Run the worker (For updating the frames and annotations)
-```bash
-python worker.py
-```
-
-# NB: You must have redis server running in the background!
-URL: https://redis.io/docs/latest/operate/oss_and_stack/install/archive/install-redis/install-redis-on-mac-os/
-
-### Change stream the URL in `worker.py`, here `cap = cv2.VideoCapture("rtsp://192.168.1.112:8554/mystream")` 
-
-### You are good to go!
+<div align="center">
+Made with ❤️ by **Machine_Mindset**
+</div>
