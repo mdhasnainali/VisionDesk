@@ -142,11 +142,11 @@ To quickly test the system, you can use these sample videos:
 ### Working Demo
 
 #### Live System Demonstration
-![Live Demo 1](/media/demo1.gif)
-![Live Demo 2](/media/demo2.gif)
+<img src="./media/prototype_1.gif" width="1000" alt="Live Demo 1" />
+<img src="./media/prototype_2.gif" width="1000" alt="Live Demo 2" />
 
 #### Video Feed Demonstration
-![Video Feed Demo](/media/footage.gif)
+<img src="./media/footage.gif" width="1000" alt="Video Feed Demo" />
 
 ## 🤝 Contributing
 
